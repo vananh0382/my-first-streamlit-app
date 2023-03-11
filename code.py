@@ -5,7 +5,7 @@ st.snow()
 a = st.number_input('Tham số a')
 b = st.number_input('Tham số b')
 if st.button('Giải'):
-  if a == b == 0:
+  if b == 0:
     st.write('Phương trình có vô số nghiệm')
   elif a == 0 and b != 0:
     st.write('Phương trình vô nghiệm')
