@@ -9,6 +9,6 @@ x_new = np.array(x_new)
 x_new = x_new.reshape(-1,1)
 y_new = model.predict(x_new)
 if st. button('Predict'):
-  st.snow()
+	st.snow()
 	st.write('Revenue Prediction')
 	st.success(y_new[0][0])
