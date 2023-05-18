@@ -20,10 +20,11 @@ def graph():
             df['S10'].fillna(0, inplace=True)
             df['BONUS'].fillna(0, inplace=True)
             df['REG-MC4AI'].fillna('N', inplace=True)
+        xulyfile()
 
         st.write('BIỂU ĐỒ MÔ TẢ SỐ LƯỢNG HỌC SINH NAM VÀ NỮ')
         st.plotly_chart(px.pie(df, names = 'GENDER'))
-        st.write('Kết luận: ')
+        st.write('Kết luận: Số học sinh nam đăng kí học lớp Python nhiều hơn số học sinh nữ.')
 
         def khoi(row):
             if row['CLASS'].startswith('10'):
@@ -33,7 +34,7 @@ def graph():
         df['KHỐI'] = df.apply(khoi, axis=1)
         st.write('BIỂU ĐỒ MÔ TẢ SỐ HỌC SINH KHỐI 10 VÀ HỌC SINH HAI KHỐI CÒN LẠI')
         st.plotly_chart(px.pie(df, names = 'KHỐI'))
-        st.write('Kết luận: ')
+        st.write('Kết luận: Học sinh khối 10 đăng kí học lớp Python nhiều hơn học sinh hai khối còn lại.')
 
         def cg(row):
             if re.search('..CV.', row['CLASS']):
@@ -59,7 +60,7 @@ def graph():
         df['CLASS_GROUP'] = df.apply(cg, axis=1)
         st.write('BIỂU ĐỒ MÔ TẢ SỐ HỌC SINH Ở CÁC LỚP CHUYÊN')
         st.plotly_chart(px.pie(df, names = 'CLASS_GROUP'))
-        st.write('Kết luận: ')
+        st.write('Kết luận: Số học sinh ở các lớp không chuyên đăng kí nhiều nhất, với 24,1%, tiếp đến là số học sinh lớp chuyên Toán, với 22,3% và số học sinh lớp chuyên Trung Nhật đăng kí ít nhất, chỉ 2,68%.')
 
         def ca(row):
             if row['PYTHON-CLASS'].endswith('S'):
@@ -69,7 +70,7 @@ def graph():
         df['CA HỌC'] = df.apply(ca, axis=1)
         st.write('BIỂU ĐỒ MÔ TẢ SỐ HỌC SINH CHỌN CA HỌC')
         st.plotly_chart(px.pie(df, names = 'CA HỌC'))
-        st.write('Kết luận: ')
+        st.write('Kết luận: Số học sinh chọn ca sáng và chiều là tương đương nhau. Vậy số lượng học sinh được chia đều ở hai ca học, đáp ứng nhu cầu học tập của tất cả học sinh.')
         
         def pf(row):
             if row['GPA'] >= 6:
@@ -79,11 +80,11 @@ def graph():
         df['Pass/Fail'] = df.apply(pf, axis=1)
         st.write('BIỂU ĐỒ MÔ TẢ SỐ HỌC SINH ĐẬU LÊN LỚP MC')
         st.plotly_chart(px.pie(df, names = 'Pass/Fail'))
-        st.write('Kết luận: ')
+        st.write('Kết luận: Số học sinh đậu lên lớp MC4AI là 64,3%, là tỉ lệ khá cao.')
 
         st.write('BIỂU ĐỒ MÔ TẢ SỐ HỌC SINH ĐĂNG KÍ HỌC TIẾP LỚP MC4AI')
         st.plotly_chart(px.pie(df, names = 'REG-MC4AI'))
-        st.write('Kết luận: ')
+        st.write('Kết luận: Số học sinh đăng kí học tiếp lớp MC4AI là 40,2%, là tỉ lệ khá thấp.')
 
     def cgag(df):
         if re.search('..CV.', df['CLASS']) and df['GENDER'] == 'F':
