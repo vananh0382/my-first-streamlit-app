@@ -129,8 +129,12 @@ def graph():
             return 'Nam A'
         df['CLASS & GENDER'] = df.apply(cgag, axis=1)
 
-    def diem():
-        def s1():
+    tab1, tab2 = st.tabs(['Số lượng học sinh', 'Điểm'])
+    with tab1:
+        sohs()
+    with tab2:
+        p = st.radio('Điểm từng session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=st.session_state.horizontal)
+        if p == 'S1':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S1'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S1'))
@@ -183,7 +187,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S1'))
             dtbs1()
             st.write('Kết luận: ')
-        def s2():
+        elif p == 'S2':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S2'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S2'))
@@ -236,7 +240,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S2'))
             dtbs2()
             st.write('Kết luận: ')
-        def s3():
+        elif p == 'S3': 
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S3'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S3'))
@@ -289,7 +293,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S3'))
             dtbs3()
             st.write('Kết luận: ')
-        def s4():
+        elif p == 'S4':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S4'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S4'))
@@ -342,7 +346,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S4'))
             dtbs4()
             st.write('Kết luận: ')
-        def s5():
+        elif p == 'S5':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S5'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S5'))
@@ -395,7 +399,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S5'))
             dtbs5()
             st.write('Kết luận: ')
-        def s6():
+        elif p == 'S6':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S6'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S6'))
@@ -448,7 +452,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S6'))
             dtbs6()
             st.write('Kết luận: ')
-        def s7():
+        elif p == 'S7':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S7'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S7'))
@@ -501,7 +505,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S7'))
             dtbs7()
             st.write('Kết luận: ')
-        def s8():
+        elif p == 'S8':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S8'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S8'))
@@ -554,7 +558,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S8'))
             dtbs8()
             st.write('Kết luận: ')
-        def s9():
+        elif p == 'S9':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S9'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S9'))
@@ -607,7 +611,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S9'))
             dtbs9()
             st.write('Kết luận: ')
-        def s10():
+        elif p == 'S10':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S10'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S10'))
@@ -660,7 +664,7 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB S10'))
             dtbs10()
             st.write('Kết luận: ')
-        def gpa():
+        elif p == 'GPA':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'GPA'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'GPA'))
@@ -713,32 +717,4 @@ def graph():
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB GPA'))
             dtbgpa()
             st.write('Kết luận: ')
-
-    tab1, tab2 = st.tabs(['Số lượng học sinh', 'Điểm'])
-    with tab1:
-        sohs()
-    with tab2:
-        p = st.radio('Điểm từng session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=st.session_state.horizontal)
-        if p == 'S1':
-            st.write(s1)
-        elif p == 'S2':
-            s2()
-        elif p == 'S3': 
-            s3()
-        elif p == 'S4':
-            s4()
-        elif p == 'S5':
-            s5()
-        elif p == 'S6':
-            s6()
-        elif p == 'S7':
-            s7()
-        elif p == 'S8':
-            s8()
-        elif p == 'S9':
-            s9()
-        elif p == 'S10':
-            s10()
-        elif p == 'GPA':
-            gpa()
 graph()
