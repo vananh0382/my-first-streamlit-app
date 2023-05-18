@@ -122,6 +122,7 @@ def classi():
   plt.xlabel('GPA')
   plt.ylabel('S6')
   st.pyplot(fig=None)
+  st.set_option('deprecation.showPyplotGlobalUse', False)
 
  mgf()
 
@@ -167,5 +168,6 @@ def classi():
                        go.Scatter3d(x=df2['S6'], y=df2['S-AVG'], z=df2['GPA'], mode='markers'),
                        go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
   st.pyplot(fig)
+  st.set_option('deprecation.showPyplotGlobalUse', False)
  barD()
 classi()
