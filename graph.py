@@ -131,7 +131,7 @@ def graph():
 
     tab1, tab2 = st.tabs(['Số lượng học sinh', 'Điểm'])
     if "visibility" not in st.session_state:
-        st.session_state.horizontal = False
+        st.session_state.horizontal = True
     with tab1:
         sohs()
     with tab2:
