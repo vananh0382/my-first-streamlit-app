@@ -84,7 +84,6 @@ def graph():
         st.write('BIỂU ĐỒ MÔ TẢ SỐ HỌC SINH ĐĂNG KÍ HỌC TIẾP LỚP MC4AI')
         st.plotly_chart(px.pie(df, names = 'REG-MC4AI'))
         st.write('Kết luận: ')
-    sohs()
 
     def cgag(df):
         if re.search('..CV.', df['CLASS']) and df['GENDER'] == 'F':
@@ -718,9 +717,9 @@ def graph():
     with tab1:
         sohs()
     with tab2:
-        p = st.radio('Điểm từng session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'))
+        p = st.radio('Điểm từng session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=st.session_state.horizontal)
         if p == 'S1':
-            s1()
+            st.write(s1)
         elif p == 'S2':
             s2()
         elif p == 'S3': 
