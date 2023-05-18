@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import plotly.graph_objects as go
 
-df = pd.read_csv("py4ai-score.csv", low_memory=False)
+df = pd.read_csv("score.csv", low_memory=False)
 df['BONUS'].fillna(0, inplace = True)
 for i in range(1, 11):
  df[f"S{i}"].fillna(0, inplace = True)
