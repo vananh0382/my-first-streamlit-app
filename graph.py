@@ -144,7 +144,7 @@ def graph():
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S1'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S1'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nữ đạt mức điểm cao hơn các bạn nam')
             def dtbs1():
                 a = 0
                 A = 0
@@ -197,7 +197,7 @@ def graph():
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S2'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S2'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam đạt điểm 9 cao hơn các bạn n')
             def dtbs2():
                 a = 0
                 A = 0
@@ -250,7 +250,7 @@ def graph():
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S3'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S3'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam đạt điểm 9 cao hơn các bạn nữ')
             def dtbs3():
                 a = 0
                 A = 0
@@ -303,7 +303,7 @@ def graph():
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S4'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S4'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nữ đạt điểm 8 cao hơn các bạn nam. Các bạn nam đạt nhiều điểm cao hơn bạn nữ.')
             def dtbs4():
                 a = 0
                 A = 0
@@ -356,7 +356,7 @@ def graph():
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S5'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S5'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nữ đạt điểm cao hơn các bạn nam.')
             def dtbs5():
                 a = 0
                 A = 0
@@ -409,7 +409,7 @@ def graph():
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S6'))
             st.write('Kết luận: ')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S6'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam đạt điểm cao hơn các bạn nữ.')
             def dtbs6():
                 a = 0
                 A = 0
@@ -456,13 +456,13 @@ def graph():
             st.write('Kết luận: ')
         elif p == 'S7':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S7'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam đạt điểm 9 nhiều hơn các bạn nữ')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S7'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp ở phòng 114 đạt điểm cao hơn các bạn ở phòng 115, lớp buổi sáng đạt điểm cao hơn lớp buổi chiều.')
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S7'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp chuyên Tin đạt điểm cao nhất. Lớp tích hợp/song ngữ, chuyên Sử Địa, chuyên Văn đạt điểm thấp nhất.')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S7'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Khối 11,12 đạt điểm cao hơn khối 10.')
             def dtbs7():
                 a = 0
                 A = 0
@@ -509,13 +509,13 @@ def graph():
             st.write('Kết luận: ')
         elif p == 'S8':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S8'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam có số điểm nhỉnh hơn các bạn nữ.')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S8'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp 114-S và 115-C có điểm cao hơn 2 lớp còn lại.')
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S8'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp chuyên Văn đạt điểm cao nhất. Lớp Tích hợp/Song ngữ, chuyên Anh, chuyên Trung Nhật đạt điểm thấp nhất.')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S8'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp 11,12 và 10 đạt mức điểm tương đương nhau.')
             def dtbs8():
                 a = 0
                 A = 0
@@ -562,13 +562,13 @@ def graph():
             st.write('Kết luận: ')
         elif p == 'S9':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S9'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam đạt điểm cao hơn các bạn nữ.')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S9'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các lớp buổi chiều đạt điểm cao hơn các lớp buổi sáng.')
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S9'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp chuyên Trung Nhật, Tích hợp/Song ngữ đạt điểm thấp nhất. Lớp chuyên Tin, chuyên Lý đạt điểm cao nhất.')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S9'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Khối 10 đạt điểm cao hơn khối 11,12.')
             def dtbs9():
                 a = 0
                 A = 0
@@ -615,13 +615,13 @@ def graph():
             st.write('Kết luận: ')
         elif p == 'S10':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S10'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Các bạn nam đạt điểm cao hơn các bạn nữ.')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'S10'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp 114-S đạt điểm cao nhất. Lớp 115-C đạt điểm thấp nhất.')
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'S10'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp chuyên Tin đạt điểm cao nhất. Lớp Tích hợp/Song ngữ và chuyên Sử Địa đạt điểm thấp nhất.')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'S10'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: Khối 11,12 đạt điểm nhỉnh hơn khối 10.')
             def dtbs10():
                 a = 0
                 A = 0
@@ -668,13 +668,13 @@ def graph():
             st.write('Kết luận: ')
         elif p == 'GPA':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'GPA'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: GPA của nam cao hơn nữ.')
             st.plotly_chart(px.box(df, x = 'PYTHON-CLASS', y = 'GPA'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: GPA của lớp 114-S cao nhất, lớp 115-S là thấp nhất.')
             st.plotly_chart(px.box(df, x = 'CLASS_GROUP', y = 'GPA'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: GPA của lớp chuyên Tin cao nhất, lớp Tích hợp/Song ngữ thấp nhất.')
             st.plotly_chart(px.box(df, x = 'KHỐI', y = 'GPA'))
-            st.write('Kết luận: ')
+            st.write('Kết luận: GPA khối 11,12 tốt hơn khối 10.')
             def dtbgpa():
                 a = 0
                 A = 0
@@ -718,5 +718,5 @@ def graph():
                 df['ĐTB GPA'] = df['CLASS & GENDER'].map(dtbgpa)
                 return st.plotly_chart(px.histogram(df, x = 'CLASS_GROUP', color = 'GENDER', barmode = 'group', y = 'ĐTB GPA'))
             dtbgpa()
-            st.write('Kết luận: ')
+            st.write('Kết luận: Lớp chuyên Trung Nhật và Tích hợp/Song ngữ học kém nhất.')
 graph()
