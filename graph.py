@@ -133,7 +133,7 @@ def graph():
     with tab1:
         sohs()
     with tab2:
-        p = st.radio('Điểm từng session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'))
+        p = st.radio('Điểm từng session', ('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'GPA'), horizontal=st.session_state.horizontal)
         if p == 'S1':
             st.plotly_chart(px.box(df, x = 'GENDER', y = 'S1'))
             st.write('Kết luận: ')
