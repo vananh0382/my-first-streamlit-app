@@ -130,6 +130,8 @@ def graph():
     df['CLASS & GENDER'] = df.apply(cgag, axis=1)
 
     tab1, tab2 = st.tabs(['Số lượng học sinh', 'Điểm'])
+    if "visibility" not in st.session_state:
+        st.session_state.horizontal = False
     with tab1:
         sohs()
     with tab2:
