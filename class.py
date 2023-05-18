@@ -80,6 +80,7 @@ def classi():
  def mhf():
   x = df['S6'].values
   y = df['S-AVG'].values
+  plt.scatter(x, y)
   x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=.2, random_state=42)
   x_train = x_train.reshape(-1,1)
   x_test = x_test.reshape(-1,1)
@@ -97,6 +98,7 @@ def classi():
   plt.xlabel('S-AVG')
   plt.ylabel('S6')
   st.pyplot(fig=None)
+  st.set_option('deprecation.showPyplotGlobalUse', False)
 
  mhf()
 
